@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-details {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #e2e6f0;
+      padding: 10px 15px 10px 15px;
+    }
+
+    p {
+      color: black;
+    }
+
+    li {
+      color: #185ADB;
+      margin-bottom: 10px;
+    }
+
+    .list-item {
+      display: inline-block;
+      width: 150px;
+      font-weight: 600;
+      margin-right: 5px;
+      font-size: 13px;
+    }
+
+    .click-button {
+      text-align: center;
+    }
+
+    .button-link {
+      text-decoration: none;
+      background-color: #185ADB;
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .button-link:hover {
+      background-color: #2663dd;
+      color: white;
+      opacity: 0.9;
+    }
+
+    .logo {
+      max-width: 100%;
+      width: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>Dear {{contactPersonName}},</p>
+    <p>We are pleased to inform you that your login credentials for KIKTEMP have been created. You can now access your
+      account using the following details:</p>
+    <div class="user-details">
+      <ul>
+        <li><strong class="list-item">Email Address</strong> - {{ emailAddress }}</li>
+        <li><strong class="list-item">Password</strong> - {{ password }}</li>
+      </ul>
+    </div>
+    <p>Please make sure to keep your login information confidential and do not share it with anyone. If you ever forget
+      your password, you can reset it using the
+      <b>Forgot Password</b>
+      link on the login page.
+    </p>
+    <div class="click-button" style="justify-content: center;">
+      <a href="{{ loginUrl }}" class="button-link">
+        Login
+      </a>
+    </div>
+    <p>
+      Thank you for choosing KIKTEMP. We look forward to serving you.
+    </p>
+    <p>Thank you,</p>
+    <p>KIKBLOX Management</p>
+    <img class="logo" src="https://kiktemp-images.blr1.digitaloceanspaces.com/kikblox_logo.png" alt="KIKBLOX Logo">
+  </div>
+</body>
+
+</html>
